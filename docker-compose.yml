@@ -1,0 +1,10 @@
+version: "3.9"
+
+services:
+  rust:
+    image: rust:latest
+    container_name: my_git_rust
+    volumes:
+      - .:/app
+    working_dir: /app
+    command: bash -c "cargo build && cargo run"
