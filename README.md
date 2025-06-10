@@ -22,9 +22,9 @@
 下記を.gitの代わりに、.mygitとして生成
 ```
 .mygit/          # .gitではなく今回のプロジェクト用に、./mygitを生成
-├── objects/     # blobs and commits (zlib-compressed)
-├── index        # JSON-based index file
-└── HEAD         # Hash of the latest commit
+├── objects/     # ファイル内容（blob）やコミット情報を zlib 圧縮して格納するディレクトリ
+├── index        # ステージングされたファイル情報を保持する JSON 形式のファイル
+└── HEAD         # 最新のコミットハッシュを保持するファイル（ログの起点）
 ```
 
 ## Usage
