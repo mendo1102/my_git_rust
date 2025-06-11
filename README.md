@@ -44,12 +44,19 @@
 │   └── main.rs
 └── target
 ```
+このディレクトリの直下に
+任意のリソースを作成
+例
+・sample.txt
 
 ```bash
 (例) sample.txt
-cargo run --bin add sample.txt
-cargo run --bin status
-cargo run --bin diff sample.txt
-cargo run --bin commit -- -m "initial commit"
-cargo run --bin log
+① cargo run --bin add sample.txt (git add と同様)
+② sample.txt内の修正
+③ cargo run --bin status (git statusと同様)
+④ cargo run --bin diff sample.txt (git diffと同様)
+cargo run --bin commit -- -m "内容変更" (git commit -m "コミットメッセージ")
+cargo run --bin log (git logと同様)
 ```
+
+
