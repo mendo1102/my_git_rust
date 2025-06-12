@@ -8,28 +8,19 @@
 <br>
 [Gitのつくりかた](https://engineering.mercari.com/blog/entry/2015-09-14-175300/)
 <br>
-(すごく勉強させていただきました。。。)
 
-## Overview
+## 概要
 
+```
 - `add.rs` ......git add 
 - `commit.rs` ...git commit
 - `log.rs` ......git log
 - `status.rs` ...git status
 - `diff.rs` .....git diff
-
-## Directory Structure
-下記を.gitの代わりに、.mygitとして生成
-```
-.mygit/          # .gitではなく今回のプロジェクト用に、./mygitを生成
-├── objects/     # ファイル内容（blob）やコミット情報を zlib 圧縮して格納するディレクトリ
-├── index        # ステージングされたファイル情報を保持する JSON 形式のファイル
-└── HEAD         # 最新のコミットハッシュを保持するファイル（ログの起点）
 ```
 
-## Usage
+## 構成
 
-ディレクトリ構成
 ```
 .
 ├── Cargo.lock
@@ -44,7 +35,21 @@
 │   └── main.rs
 └── target
 ```
-このディレクトリの直下に
+
+下記を.gitの代わりに、.mygitとして生成
+```
+.mygit/          # .gitではなく今回のプロジェクト用に、./mygitを生成
+├── objects/     # ファイル内容（blob）やコミット情報を zlib 圧縮して格納するディレクトリ
+├── index        # ステージングされたファイル情報を保持する JSON 形式のファイル
+└── HEAD         # 最新のコミットハッシュを保持するファイル（ログの起点）
+```
+
+
+
+## Usage
+
+ディレクトリ構成
+ディレクトリの直下に
 任意のリソースを作成
 例
 ・sample.txt
